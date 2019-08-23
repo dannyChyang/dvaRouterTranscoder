@@ -1,8 +1,8 @@
 {
-  "name": "babylon-demo",
+  "name": "dvaRouterTranscoder",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "read.js",
   "scripts": {
     "example": "node read --dir src"
   },
@@ -24,5 +24,5 @@
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
     "yargs-parser": "^13.1.1"
-  }
+  },
 }
