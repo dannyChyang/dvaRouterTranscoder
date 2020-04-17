@@ -1,10 +1,16 @@
 {
-  "name": "dvaRouterTranscoder",
+  "name": "dva-trans",
   "version": "1.0.0",
   "description": "",
-  "main": "read.js",
   "scripts": {
-    "example": "node read --dir src"
+    "build2": "rollup -c ./rollup.config.js",
+    "build": "webpack -c ./webpack.config.js",
+    "example": "node src/read --dir ./example/src --output ./example/dest",
+    "debug": "node --inspect-brk src/read --dir ./example/src",
+    "start": "node lib/trans --dir ./example/src --output ./example/dest"
+  },
+  "bin": {
+    "dr-trans": "./cli.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +28,17 @@
     "@babel/types": "^7.0.0",
     "core-js": "^3.2.1",
     "fs-extra": "^8.1.0",
-    "lodash": "^4.17.15",
+    "signale": "^1.4.0",
     "yargs-parser": "^13.1.1"
   },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "fs": "0.0.1-security",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "main": "index.js"
 }
